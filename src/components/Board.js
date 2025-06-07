@@ -10,7 +10,9 @@ import win from "./static.js/win.mp3"
 function Board() {
   const [state, setState] = useState(Array(9).fill(null))
   const [isXturn, setIsXturn] = useState(true)
-  const [audio, setAudio] = useState(new Audio(win))
+  // const [audio, setAudio] = useState(new Audio(win))
+  const audio = new Audio(win)
+
 
   const checkWinner = () => {
     const winnerLogic = [
